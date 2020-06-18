@@ -49,42 +49,6 @@ main .most-accessed h3 {
   margin-bottom: 20px;
 }
 
-main .most-accessed .cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 20px;
-  row-gap: 30px;
-}
-
-main .most-accessed .cards .card {
-  position: relative;
-  width:300px ;
-  height: 202px;
-}
-
-main .most-accessed .cards .card img{
-  position: absolute;
-  top: 0;
-  border-radius: 15px;
-  width: 100%;
-  height: 140px;
-}
-main .most-accessed .cards .card .card-info {
-  position: absolute;
-  bottom: 0;
-}
-
-main .most-accessed .cards .card .card-info h4 {
-  font-size: 18px;
-  line-height: 21px;
-}
-
-main .most-accessed .cards .card .card-info span {
-  font-size: 14px;
-  line-height: 16px;
-  color: var(--font-color-2);
-}
-
 
 
 
