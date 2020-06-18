@@ -104,3 +104,14 @@ main .most-accessed .cards .card .card-info span {
   color: var(--font-color-2);
 }
 
+
+footer {
+  background-color: #eeeeee ;
+  color: #999;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  padding: 23px 0;
+  width: 100%;
+}
+
