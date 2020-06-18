@@ -20,3 +20,34 @@ body {
   font-family: Roboto, sans-serif;
   list-style: none;
 }
+
+main {
+  width: 940px;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 30px 0;
+  margin: 0 auto;
+  width: 940px;
+}
+
+header a:first-child{
+  margin-right: 122px;
+}
+header a:last-child {
+  margin-left: 30px;
+}
+
+
+footer {
+  background-color: #eeeeee;
+  color: #999;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  padding: 23px 0;
+  width: 100%;
+}
