@@ -1,3 +1,7 @@
 a[href="recipes.html"]{
   font-weight: bold;
 }
+
+#recipes .cards{
+  margin: 20px 0 50px;
+}
