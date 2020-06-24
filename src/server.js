@@ -1,6 +1,6 @@
 const express = require('express');
-const nunjucks= require('nunjucks');
-
+const nunjucks = require('nunjucks');
+const data = require('./data');
 const server = express();
 
 const port = process.env.PORT || 3000;
@@ -15,8 +15,10 @@ server.set('view engine', 'njk');
 nunjucks.configure('view',nunjucksConfigurations);
 // routes
 
+
 server.get('/', (req,res) => {
-  return res.render('index')
+  const dataIndex = data.slice(0,6);
+  return res.render('index', { dataIndex });
 });
 
 server.get('/about', (req,res) => {
