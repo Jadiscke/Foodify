@@ -1,21 +1,12 @@
-<!DOCTYPE html>
-<html lang="pt_BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Foodify</title>
+{% extends "layout.njk" %}
 
-  <link rel="stylesheet" href="styles/main.css">
+{% set title = "Foodify - Home" %}
+
+{% block styles %}
   <link rel="stylesheet" href="styles/index.css">
-</head>
-<body>
-  <header>
-    <a href="/" class="logo"
-        ><img src="/assets/logo.png" alt="Logo Foodify"
-      /></a>
-      <a href="/about">Sobre</a>
-      <a href="/recipes">Receitas</a>
-  </header>
+{% endblock styles %}
+
+{% block main %}
 
   <main>
     <div class="head">
@@ -88,10 +79,13 @@
     </div>
   </main>
 
-  <footer>
-    Todos os direitos reservados receitas Foodify.
-  </footer>
+{% endblock main %}
 
+<footer>
+  Todos os direitos reservados receitas Foodify.
+</footer>
+
+{% block modal %}
   <div class="modal">
     <div class="modal-content">
       <img src="" alt="Food Image">
@@ -101,7 +95,11 @@
     </div>
   </div>
 
+{% endblock modal %}
 
+{% block scripts %}
   <script src="/scripts/modal.js"></script>
+{% endblock scripts %}
+
 </body>
 </html>
