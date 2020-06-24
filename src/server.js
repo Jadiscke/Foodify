@@ -26,7 +26,8 @@ server.get('/about', (req,res) => {
 });
 
 server.get('/recipes', (req, res) => {
-  return res.render('recipes');
+  const dataIndex = data;
+  return res.render('recipes', { dataIndex });
 });
 server.get('/recipes/:index', (req,res) => {
   const food = data[parseInt(req.params.index)];

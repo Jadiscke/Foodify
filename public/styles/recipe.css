@@ -10,6 +10,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  pointer-events: none;
 }
 
 #recipe .cards .card img{
@@ -29,12 +30,18 @@
 }
 
 #recipe .cards .card .recipe {
+  display: inline-block;
   width: 100%;
   text-align: left;
 
   color: #444;
   font-size: 18px;
   line-height: 28px;
+}
+
+#recipe .cards .card .recipe ol,
+#recipe .cards .card .recipe ul {
+  line-height: 38px;
 }
 
 #recipe .cards .card .recipe li {
@@ -47,6 +54,10 @@
   font-weight: bold;
   line-height: 28px;
   margin: 4% 0;
+}
+
+#recipe .cards .card .recipe p {
+  text-indent: 38px;
 }
 
 footer {

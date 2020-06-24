@@ -4,6 +4,7 @@ a[href="recipes.html"]{
 
 #recipes .cards{
   margin: 20px 0 50px;
+  min-height: 70vh;
 }
 
 
