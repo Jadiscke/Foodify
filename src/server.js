@@ -12,7 +12,7 @@ const nunjucksConfigurations = {
 
 server.use(express.static('public'));
 server.set('view engine', 'njk');
-nunjucks.configure(nunjucksConfigurations);
+nunjucks.configure('view',nunjucksConfigurations);
 // routes
 
 server.get('/', (req,res) => {
@@ -24,7 +24,7 @@ server.get('/about', (req,res) => {
 });
 
 server.get('/recipes', (req, res) => {
-  return res.render('/recipes');
+  return res.render('recipes');
 });
 
 server.listen(port, () => {
