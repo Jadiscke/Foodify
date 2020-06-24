@@ -28,6 +28,10 @@ server.get('/about', (req,res) => {
 server.get('/recipes', (req, res) => {
   return res.render('recipes');
 });
+server.get('/recipes/:index', (req,res) => {
+  const food = data[parseInt(req.params.index)];
+  return res.render('recipe', {food});
+});
 
 server.listen(port, () => {
   console.log(`Listening on PORT: ${3000}`);

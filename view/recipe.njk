@@ -1,0 +1,51 @@
+{% extends "layout.njk" %}
+{% set title = "Foodify - Receitas" %}
+
+{% block styles %}
+<link rel="stylesheet" href="/styles/recipe.css">
+{% endblock styles %}
+
+{% block main %}
+  <main id="recipe">
+    <div class="cards">
+      <div class="card">
+        <img src="{{food.image}}" alt="{{food.title}} Image">
+        <div class="card-info">
+          <h4 class="card-name">
+            {{food.title}}
+          </h4>
+          <span class="card-author">{{food.author}}</span>
+        </div>
+        <div class="card-recipe">
+          <div class="recipe">
+            <h5>
+              Ingredientes
+            </h5>
+            <ul class="ingredients">
+              {% for ingredients in food.ingredients %}
+              <li>{{ingredients}}</li>
+              {% endfor %}
+            </ul>
+          </div>
+          <div class="recipe">
+            <h5>
+              Modo de Preparo
+            </h5>
+            <ul class="preparation">
+              {% for step in food.preparation %}
+              <li>{{step}}</li>
+              {% endfor %}
+            </ul>
+          </div>
+          <div class="recipe">
+            <h5>Informações Adicionais</h5>
+            <p>{{food.information}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+{% endblock main %}
+
+
