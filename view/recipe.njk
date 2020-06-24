@@ -21,7 +21,8 @@
             <h5>
               Ingredientes
             </h5>
-            <ul class="ingredients">
+            <a>Mostrar</a>
+            <ul class="ingredients hide">
               {% for ingredients in food.ingredients %}
               <li>{{ingredients}}</li>
               {% endfor %}
@@ -31,7 +32,8 @@
             <h5>
               Modo de Preparo
             </h5>
-            <ol class="preparation">
+            <a>Mostrar</a>
+            <ol class="preparation hide">
               {% for step in food.preparation %}
               <li>{{step}}</li>
               {% endfor %}
@@ -39,7 +41,8 @@
           </div>
           <div class="recipe">
             <h5>Informações Adicionais</h5>
-            <p>{{food.information}}</p>
+            <a>Mostrar</a>
+            <p class='hide'>{{food.information}}</p>
           </div>
         </div>
       </div>
@@ -47,5 +50,9 @@
   </main>
 
 {% endblock main %}
+
+{% block scripts %}
+<script src="/scripts/hide.js"></script>
+{% endblock scripts %}
 
 

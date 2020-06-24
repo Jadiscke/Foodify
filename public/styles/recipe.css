@@ -40,8 +40,21 @@
 }
 
 #recipe .cards .card .recipe ol,
-#recipe .cards .card .recipe ul {
+#recipe .cards .card .recipe ul,
+#recipe .cards .card .recipe p {
+  display: inline-block;
+  max-height: 300px;
   line-height: 38px;
+  transition: ease-in-out 1s;
+  visibility: visible;
+  overflow: hidden;
+}
+#recipe .cards .card .recipe ol *,
+#recipe .cards .card .recipe ul * {
+  max-height: 300px;
+  transition: ease-in-out 1s;
+  visibility: visible;
+  overflow: hidden;
 }
 
 #recipe .cards .card .recipe li {
@@ -60,6 +73,26 @@
   text-indent: 38px;
 }
 
+#recipe a {
+  display: inline-block;
+  pointer-events: all;
+  color: #777777;
+  margin-bottom: 18px;
+}
+
 footer {
   margin-top: 4%;
+}
+
+.hide {
+  padding-bottom: 0;
+  max-height: 0!important;
+  visibility: hidden;
+  transition: height ease-in-out 1s;
+}
+
+.hide * {
+  max-height: 0;
+  visibility: hidden;
+  transition: height ease-in-out 1s;
 }
