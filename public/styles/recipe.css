@@ -42,7 +42,7 @@
 #recipe .cards .card .recipe ol,
 #recipe .cards .card .recipe ul,
 #recipe .cards .card .recipe p {
-  display: inline-block;
+  display: block;
   max-height: 300px;
   line-height: 38px;
   transition: ease-in-out 1s;
