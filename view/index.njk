@@ -1,0 +1,58 @@
+{% extends "layout.njk" %}
+
+{% set title = "Foodify - Home" %}
+
+{% block styles %}
+  <link rel="stylesheet" href="styles/index.css">
+{% endblock styles %}
+
+{% block main %}
+
+  <main>
+    <div class="head">
+      <div class="head-text">
+        <h1>As melhores receitas</h1>
+        <p>Aprenda a construir os melhores pratos com receitas criadas por profissionais do mundo inteiro</p>
+      </div>
+      <div class="head-image">
+        <img src="/assets/chef.png" alt="">
+      </div>
+    </div>
+    <div class="most-accessed">
+      <h3>Mais acessadas</h3>
+      <div class="cards">
+      {% for data in dataIndex %}
+      
+        <div class="card" id="{{loop.index0}}">
+          <img src="{{data.image}}" alt="{{data.title}} Image">
+          <div class="card-info">
+            <h4 class="card-name">
+              {{data.title}}
+            </h4>
+            <span class="card-author">{{data.author}}</span>
+          </div>
+        </div>
+      
+      {% endfor %}
+      </div>
+    </div>
+  </main>
+
+{% endblock main %}
+
+
+{% block modal %}
+  <div class="modal">
+    <div class="modal-content">
+      <img src="" alt="Food Image">
+      <h3></h3>
+      <span></span>
+      <span id="close-modal">Fechar Modal</span>
+    </div>
+  </div>
+
+{% endblock modal %}
+
+{% block scripts %}
+  <script src="/scripts/modal.js"></script>
+{% endblock scripts %}

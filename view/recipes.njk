@@ -1,0 +1,41 @@
+{% extends "layout.njk" %}
+{% set title = "Foodify - Recipes" %}
+
+{% block styles %}
+  <link rel="stylesheet" href="styles/recipes.css"/>
+{% endblock styles %}
+
+{% block main %}
+  <main id="recipes">
+     <div class="cards">
+      {% for data in dataIndex %}
+      
+        <div class="card" id="{{loop.index0}}">
+          <img src="{{data.image}}" alt="{{data.title}} Image">
+          <div class="card-info">
+            <h4 class="card-name">
+              {{data.title}}
+            </h4>
+            <span class="card-author">{{data.author}}</span>
+          </div>
+        </div>
+      
+      {% endfor %}
+  </main>
+
+{% endblock main %}
+
+{% block modal %}
+  <div class="modal">
+    <div class="modal-content">
+      <img src="/assets/burger.png" alt="Burguer Image">
+      <h3>Triplo bacon burguer</h3>
+      <span>por Vania Steroski</span>
+      <span id="close-modal">Fechar modal</span>
+    </div>
+  </div>
+{% endblock modal %}
+
+{% block scripts %}
+  <script src="/scripts/modal.js"></script>
+{% endblock scripts %}

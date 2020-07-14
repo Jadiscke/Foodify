@@ -22,7 +22,8 @@ body {
 }
 
 main {
-  width: 940px;
+  max-width: 940px;
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -79,6 +80,7 @@ footer {
   border-radius: 15px;
   width: 100%;
   height: 140px;
+  object-fit: cover;
 }
 .cards .card .card-info {
   position: absolute;
