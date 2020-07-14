@@ -20,6 +20,7 @@
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
   - [Test](#test)
+      - [Dev Dependecies](#dev-dependecies)
 - [Usage](#usage)
 - [Roadmap](#roadmap)
 - [Contributing](#contributing)
@@ -39,6 +40,9 @@ This project consists of Foodify a complete recipe website. See it's [usage](#Us
 
 * [NodeJS](https://nodejs.org/en/)
 * [Nunjucks](https://mozilla.github.io/nunjucks/)
+* [Express]
+* [HTML5]
+* [CSS3]
 
 
 
@@ -83,6 +87,17 @@ npm install
 ```
 
 ### Test
+
+For testing you need to use some dev dependendencies.
+You already installed it on with the installation process.
+
+##### Dev Dependecies
+ 
+ * [*npm-run-all*](https://www.npmjs.com/package/npm-run-all)
+ * [*browser-sync*](https://www.browsersync.io/)
+ * [*nodemon*](https://nodemon.io/)
+
+Use the command below to start the server with nodemon and browser-sync.
 
 ```sh
 npm start
