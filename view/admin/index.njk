@@ -9,6 +9,7 @@
 {% block main %}
 
   <main>
+    <h3>Gerenciar Receitas</h3>
       <div class="cards">
       {% for data in dataIndex %}
       
@@ -19,6 +20,7 @@
               {{data.title}}
             </h4>
             <span class="card-author">{{data.author}}</span>
+            <a href="/admin/recipes">Visualizar</a>
           </div>
         </div>
       {% endfor %}

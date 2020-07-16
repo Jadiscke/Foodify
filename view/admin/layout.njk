@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{title}}</title>
 
-    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/admin/main.css">
     {% block styles %}{% endblock styles %}
 
   </head>
   <body>
     <header>
-      <a href="/admin/recipes" class="logo"><img src="/assets/black-logo.png" alt="Logo Foodify"/></a>
+      <div>
+        <a href="/admin/recipes" class="logo"><img src="/assets/black-logo.png" alt="Logo Foodify"/></a>
+      </div>
+      
     </header>
 
     {% block main %}{% endblock main %}
