@@ -21,6 +21,7 @@
 }
 
 #recipe .cards .card .card-info {
+  display: block;
   position: static;
   text-align: center;
 }
