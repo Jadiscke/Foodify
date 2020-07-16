@@ -10,3 +10,7 @@ exports.show =  (req,res) => {
   const food = data[parseInt(req.params.id)];
   return res.render('admin/recipe', {food});
 }
+
+exports.create =  (req, res) => {
+  res.render('admin/create');
+}

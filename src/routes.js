@@ -11,6 +11,7 @@ routes.get('/recipes',client.recipes);
 routes.get('/recipes/:index', client.recipe);
 
 routes.get("/admin/recipes", admin.index);
+routes.get("/admin/recipes/create", admin.create); // Mostrar formulário de nova receita
 routes.get("/admin/recipes/:id", admin.show); // Exibir detalhes de uma receita
 
 module.exports = routes
