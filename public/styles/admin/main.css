@@ -38,9 +38,23 @@ header {
 header div {
   display: block;
   width: 100%;
-  max-width: 940px;   
+  max-width: 940px;
+  position: relative;   
+}
+header div a[type="button"] {
+  padding: 8px 16px;
+  background-color: #6558C3;
+  color: #eeeeee;
+  position: absolute;
+  right: 48px;
+  top: 0;
+  z-index: 1;
+  cursor: pointer;
 }
 
+header div a[type="button"]:hover {
+  filter: brightness(125%);
+}
 h3 {
   font-weight: bold;
   font-size: 24px;
