@@ -76,10 +76,21 @@ h3 {
   color: #6558C3;
 }
 
-}
 .cards .card .card-info {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
+  width: 100%;
+}
 
+.cards .card .card-info .card-name{
+  color: var(--font-color);
+  font-size: 18px;
+  line-height: 21px;
+}
+.cards .card .card-info .card-author{
+  color: var(--font-color-2);
+  font-size: 14px;
+  line-height: 16px;
+  margin-top: 5px;
 }
