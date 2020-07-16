@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    {% block styles %}{% endblock styles %}
+
+  </head>
+  <body>
+    <header>
+      <a href="/admin/recipes" class="logo"><img src="/assets/black-logo.png" alt="Logo Foodify"/></a>
+    </header>
+
+    {% block main %}{% endblock main %}
+
+  </body>
+</html>
