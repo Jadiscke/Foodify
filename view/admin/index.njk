@@ -1,0 +1,28 @@
+{% extends "layout.njk" %}
+
+{% set title = "Foodify - Admin" %}
+
+{% block styles %}
+  <link rel="stylesheet" href="/styles/admin/index.css">
+{% endblock styles %}
+
+{% block main %}
+
+  <main>
+      <div class="cards">
+      {% for data in dataIndex %}
+      
+        <div class="card" id="{{loop.index0}}">
+          <img src="{{data.image}}" alt="{{data.title}} Image">
+          <div class="card-info">
+            <h4 class="card-name">
+              {{data.title}}
+            </h4>
+            <span class="card-author">{{data.author}}</span>
+          </div>
+        </div>
+      {% endfor %}
+      </div>
+  </main>
+
+{% endblock main %}
