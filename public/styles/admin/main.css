@@ -50,6 +50,7 @@ header div a[type="button"] {
   top: 0;
   z-index: 1;
   cursor: pointer;
+  border-radius: 2px;
 }
 
 header div a[type="button"]:hover {
