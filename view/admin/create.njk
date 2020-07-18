@@ -3,13 +3,21 @@
 {% set title = "Foodify - Admin" %}
 
 {% block styles %}
-  <link rel="stylesheet" href="/styles/admin/index.css">
+  <link rel="stylesheet" href="/styles/admin/create.css">
 {% endblock styles %}
 
 {% block main %}
 
   <main>
-    <h3>Nova Receita</h3>
+    <form action="/admin/recipes">
+    <div class="head-form">
+      <h3>Criando Receita</h3>
+      <button type="submit"><span>Salvar receita</span></button>
+    </div>
+    
+    </form>
+    
+
       
   </main>
 

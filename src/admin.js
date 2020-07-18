@@ -14,3 +14,7 @@ exports.show =  (req,res) => {
 exports.create =  (req, res) => {
   res.render('admin/create');
 }
+
+exports.post =  (req, res) => {
+  res.send(req.body);
+}

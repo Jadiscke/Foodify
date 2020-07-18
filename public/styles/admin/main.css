@@ -41,19 +41,21 @@ header div {
   max-width: 940px;
   position: relative;   
 }
-header div a[type="button"] {
+header div a[type="button"],
+form button {
   padding: 8px 16px;
   background-color: #6558C3;
   
   position: absolute;
-  right: 48px;
+  right: 0;
   top: 0;
   z-index: 1;
   cursor: pointer;
   border-radius: 2px;
   transition: ease-in-out 500ms;
 }
-header div a[type="button"] span {
+header div a[type="button"] span,
+form button span {
   display: inline-block;
   color: #eeeeee;
   width: 100%;
@@ -61,7 +63,8 @@ header div a[type="button"] span {
   filter: drop-shadow(0 20px 8px black );
 }
 
-header div a[type="button"]:hover {
+header div a[type="button"]:hover,
+form button:hover {
   transition: ease-in-out 500ms;
   filter: brightness(125%);
 }
