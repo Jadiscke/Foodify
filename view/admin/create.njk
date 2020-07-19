@@ -9,16 +9,68 @@
 {% block main %}
 
   <main>
-    <form action="/admin/recipes">
-    <div class="head-form">
-      <h3>Criando Receita</h3>
-      <button type="submit"><span>Salvar receita</span></button>
-    </div>
+    <form action="/admin/recipes" method='post'>
+      <div class="head-form">
+        <h3>Criando Receita</h3>
+        <button type="submit"><span>Salvar receita</span></button>
+      </div>
+      <label for="image_url">Imagem</label>
+      <input type="text" name="image_url">
+      <label for="ingredients[]">Ingredientes</label>
+      <div id="ingredients">
+        <div class="ingredient">
+          <input type="text" name="ingredients[]" value="" placeholder="Ingrediente" />
+        </div>
+      </div>
+      <button type="button" class="add-ingredient"> <span>Adicionar Ingrediente</span> </button>
+      <label for="preparations[]">Modo de Preparo</label>
+      <div id="preparations">
+        <div class="preparation">
+          <input type="text" name="preparations[]" value="" placeholder="Passo" />
+        </div>
+      </div>
+      <button type="button" class="add-preparation"><span>Adicionar novo passo</span></button>
+      <label for="information">Informações Adicionais</label>
+      <textarea name="information" id="" cols="30" rows="10">
+
+      </textarea>
     
     </form>
     
 
       
   </main>
+
+  <script>
+    function addField(fieldName) {
+    const fields = document.querySelector(`#${fieldName}s`);
+    const fieldContainer = document.querySelectorAll(`.${fieldName}`);
+
+    // Realiza um clone do último ingrediente adicionado
+    const newField = fieldContainer[fieldContainer.length - 1].cloneNode(true);
+
+    // Não adiciona um novo input se o último tem um valor vazio
+    if (newField.children[0].value == "") return false;
+
+    // Deixa o valor do input vazio
+    newField.children[0].value = "";
+    fields.appendChild(newField);
+  }
+
+  function getFieldName(className){
+    return className.slice(4);
+  }
+
+  const buttons = document.querySelectorAll("div+button");
+  for (const button of buttons){
+    button.addEventListener("click", (event) => {
+      const fieldName = getFieldName(event.target.className)
+      console.log(fieldName);
+      return addField(fieldName)
+    });
+  
+  }
+    
+  </script>
 
 {% endblock main %}

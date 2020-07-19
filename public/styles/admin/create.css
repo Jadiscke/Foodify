@@ -1,10 +1,11 @@
 form {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
   justify-content: space-between;
   width: 100%;
   max-width: 940px;
+  flex-wrap: wrap;
 
 }
 
@@ -14,10 +15,50 @@ form .head-form{
   justify-content: space-between;
   position: relative;
   width: 100%;
+  margin-bottom: 30px;
 }
 form button {
   position: static;
+  max-width: 200px;
 }
 form button span {
   filter: none;
+  pointer-events: none;
 }
+
+form input, form label {
+  display: block;
+  text-align: left;
+}
+form label {
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top: 30px;
+}
+
+form input {
+  display: block;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: white;
+  height: 50px;
+  padding: 10px;
+}
+form textarea {
+  outline: #777;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: white;
+  margin-bottom: 50px;
+  padding: 15px;
+  max-height: 257px;
+}
+
+form div+button {
+  margin-top: 15px;
+}
+
+
