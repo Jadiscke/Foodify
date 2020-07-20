@@ -116,7 +116,8 @@ npm start
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Administration
+- [x] Administration
+- [ ] Refactor Client
 - [ ] SQL DATABASE
 - [ ] Authentication and Privileges
 - [ ] Host
