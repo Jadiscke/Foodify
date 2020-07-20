@@ -13,14 +13,14 @@
       <div class="cards">
       {% for data in dataIndex %}
       
-        <div class="card" id="{{loop.index0}}">
-          <img src="{{data.image}}" alt="{{data.title}} Image">
+        <div class="card" id="{{data.id}}">
+          <img src="{{data.image_url}}" alt="{{data.title}} Image">
           <div class="card-info">
             <h4 class="card-name">
               {{data.title}}
             </h4>
             <span class="card-author">{{data.author}}</span>
-            <a href="/admin/recipes/{{loop.index0}}">Visualizar</a>
+            <a href="/admin/recipes/{{data.id}}">Visualizar</a>
           </div>
         </div>
       {% endfor %}
