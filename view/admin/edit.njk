@@ -9,17 +9,21 @@
 {% block main %}
 
   <main>
+    <input type="hidden" name="id" value={{food.id}}>
     <form action="/admin/recipes?_method=PUT" method='post'>
       <div class="head-form">
         <h3>Criando Receita</h3>
-        <button type="submit"><span>Salvar receita</span></button>
+        <div>
+          <button id="delete" type="button"><span>Deletar</span></button>
+          <button type="submit"><span>Salvar receita</span></button>
+        </div>
+        
       </div>
       {% include "admin/form.njk" %}
 
       <input type="hidden" name="id" value={{food.id}}>
     
     </form>
-    
 
       
   </main>
@@ -54,6 +58,16 @@
   
   }
     
+  </script>
+
+  <script>
+    const form = document.querySelector("form");
+    const deleteButton = document.querySelector("#delete");
+    const deletePath = "/admin/recipes?_method=DELETE";
+    deleteButton.addEventListener("click", function(event){
+      form.setAttribute("action",deletePath);
+      return form.submit()
+    });
   </script>
 
 {% endblock main %}

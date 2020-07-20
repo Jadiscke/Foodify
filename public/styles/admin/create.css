@@ -61,4 +61,10 @@ form div+button {
   margin-top: 15px;
 }
 
+/* Delete */
+
+
+#delete {
+  background-color: #DC4747;
+}
 
