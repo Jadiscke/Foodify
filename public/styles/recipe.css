@@ -78,7 +78,7 @@
   text-indent: 38px;
 }
 
-#recipe a {
+#recipe h5+a {
   font-size: 12px;
   font-weight: normal;
   margin-left: 8px;

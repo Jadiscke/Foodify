@@ -1,0 +1,16 @@
+#recipe .head-recipe{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  margin-bottom: 30px;
+}
+#recipe .head-recipe a[type="button"] {
+  position: static;
+  max-width: 200px;
+}
+#recipe .head-recipe a[type="button"] span {
+  filter: none;
+  pointer-events: none;
+}
