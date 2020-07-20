@@ -23,7 +23,7 @@ exports.show =  (req,res) => {
     ...foundRecipe,
 
   }
-  return res.render('recipes/show', {food: recipe});
+  return res.render('admin/recipe', {food: recipe});
 }
 
 exports.create =  (req, res) => {
