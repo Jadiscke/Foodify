@@ -18,4 +18,5 @@ routes.get("/admin/recipes/:id", admin.show); // Exibir detalhes de uma receita
 routes.get("/admin/recipes/:id/edit", admin.showEdit);
 routes.post("/admin/recipes", admin.post);
 routes.put("/admin/recipes", admin.put);
+routes.delete("/admin/recipes", admin.delete);
 module.exports = routes

@@ -105,3 +105,17 @@ exports.showEdit = (req,res) => {
   }
   return res.render('admin/edit', {food: recipe});
 }
+
+exports.delete =  (req,res) => {
+  const { id } = req.body;
+  const filteredArray = data.recipes.filter((recipe) => {
+    return recipe.id != id
+  });
+
+  data.recipes =  filteredArray;
+  fs.writeFile("src/data.json", JSON.stringify(data,null,2), function(err){
+    if (err) return res.send("Write error!")
+
+    return res.redirect("/admin")
+  });
+}
