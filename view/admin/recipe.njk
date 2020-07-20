@@ -3,10 +3,15 @@
 
 {% block styles %}
 <link rel="stylesheet" href="/styles/recipe.css">
+<link rel="stylesheet" href="/styles/admin/recipe.css">
 {% endblock styles %}
 
 {% block main %}
   <main id="recipe">
+    <div class="head-recipe">
+      <h3>Criando Receita</h3>
+      <a href="/admin/recipes/{{food.id}}/edit" type="button"><span>Editar</span></a>
+    </div>
     <div class="cards">
       <div class="card">
         <img src="{{food.image_url}}" alt="{{food.title}} Image">
@@ -34,7 +39,7 @@
             </h5>
             <a>Mostrar</a>
             <ol class="preparation hide">
-              {% for step in food.preparation %}
+              {% for step in food.preparations %}
               <li>{{step}}</li>
               {% endfor %}
             </ol>
