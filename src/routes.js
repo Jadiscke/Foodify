@@ -10,7 +10,7 @@ routes.get('/about',client.about);
 routes.get('/recipes',client.recipes);
 routes.get('/recipes/:index', client.recipe);
 routes.get('/admin', (req,res) => {
-  return res.redirect('/admin/recipres')
+  return res.redirect('/admin/recipes')
 });
 routes.get("/admin/recipes", admin.index);
 routes.get("/admin/recipes/create", admin.create); // Mostrar formulário de nova receita
