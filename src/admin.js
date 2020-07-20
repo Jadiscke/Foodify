@@ -51,7 +51,7 @@ exports.post =  (req, res) => {
   data.recipes.push(data_send);
   
 
-  fs.writeFile("data.json",JSON.stringify(data, null, 2), function(err){
+  fs.writeFile("src/data.json",JSON.stringify(data, null, 2), function(err){
     if(err) return res.send('Write File Error');
     console.log(data);    
     res.redirect('/admin');
