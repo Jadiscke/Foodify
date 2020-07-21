@@ -23,8 +23,8 @@
       <div class="cards">
       {% for data in dataIndex %}
       
-        <div class="card" id="{{loop.index0}}">
-          <img src="{{data.image}}" alt="{{data.title}} Image">
+        <div class="card" id="{{data.id}}">
+          <img src="{{data.image_url}}" alt="{{data.title}} Image">
           <div class="card-info">
             <h4 class="card-name">
               {{data.title}}

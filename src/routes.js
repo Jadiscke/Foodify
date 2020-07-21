@@ -8,7 +8,7 @@ routes.get('/',client.home);
 routes.get('/about',client.about);
 
 routes.get('/recipes',client.recipes);
-routes.get('/recipes/:index', client.recipe);
+routes.get('/recipes/:id', client.recipe);
 routes.get('/admin', (req,res) => {
   return res.redirect('/admin/recipes')
 });
