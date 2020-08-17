@@ -42,18 +42,31 @@ header {
   width: 100%;
 }
 header div {
-  display: block;
+  display: flex;
+  align-items: center;
   width: 100%;
-  max-width: 94.0rem;
-  position: relative;   
+  max-width: 94.0rem;   
 }
-header div a[type="button"],
+
+header div a {
+  color: #999;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+header div a:nth-child(2){
+  margin-left: 12.2rem;
+  margin-right: 3rem;
+}
+
+a.chosen {
+  color: #fff;
+}
+
+.head a[type="button"],
 form button,
 #recipe .head-recipe a[type="button"] {
   padding: .8rem 1.6rem;
   background-color: #6558C3;
-  
-  position: absolute;
   right: 0;
   top: 0;
   z-index: 1;
@@ -61,7 +74,7 @@ form button,
   border-radius: .2rem;
   transition: ease-in-out 500ms;
 }
-header div a[type="button"] span,
+.head a[type="button"] span,
 form button span,
 #recipe .head-recipe a[type="button"] span {
   display: inline-block;
@@ -71,12 +84,20 @@ form button span,
   filter: drop-shadow(0 2.0rem .8rem black );
 }
 
-header div a[type="button"]:hover,
+.head a[type="button"]:hover,
 form button:hover,
 #recipe .head-recipe a[type="button"]:hover {
   transition: ease-in-out 500ms;
   filter: brightness(125%);
 }
+
+.head {
+  display: flex;
+  max-width: 94rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
 h3 {
   font-weight: bold;
   font-size: 2.4rem;

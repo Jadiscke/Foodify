@@ -9,7 +9,11 @@
 {% block main %}
 
   <main>
-    <h3>Gerenciar Receitas</h3>
+    <div class="head">
+      <h3>Gerenciar Receitas</h3>
+      <a type="button" href="/admin/recipes/create"><span>Nova Receita</span></a>
+    </div>
+    
       <div class="cards">
       {% for data in dataIndex %}
       
