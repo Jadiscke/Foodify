@@ -12,7 +12,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "nodemon": "nodemon src/server.js",
-    "browsersync": "browser-sync start --proxy http://localhost:3000 --files 'public,view, view/admin'",
+    "browsersync": "browser-sync start --proxy http://localhost:3000 --port 3001 --files 'public,view, view/admin'",
     "start": "npm-run-all -p nodemon browsersync"
   },
   "repository": {

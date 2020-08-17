@@ -1,7 +1,7 @@
 const express = require('express');
 const routes = express.Router();
-const client = require('./client');
-const admin = require('./admin');
+const client = require('./app/controllers/client');
+const admin = require('./app/controllers/admin');
 
 routes.get('/',client.home);
 
