@@ -30,6 +30,7 @@ main {
   max-width: 94.0rem;
   width: 90%;
   margin: 0 auto;
+  min-height: 81vh;
 }
 
 header {
