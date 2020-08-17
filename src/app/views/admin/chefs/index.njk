@@ -15,7 +15,7 @@
     </div>
     
       <div class="cards">
-      {% for data in dataIndex %}
+      {% for data in chefs %}
       
         <div class="card" id="{{data.id}}">
           <img src="{{data.avatar_url}}" alt="{{data.name}} avatar">
@@ -23,8 +23,6 @@
             <h4 class="card-name">
               {{data.name}}
             </h4>
-            <span class="card-author">{{data.author}}</span>
-            <a href="/admin/chefs/{{data.id}}">Visualizar</a>
           </div>
         </div>
       {% endfor %}
