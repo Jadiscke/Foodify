@@ -106,3 +106,7 @@ dist
 # VS CODE
 .vscode/
 extras/
+
+#lock
+*-lock.json
+*.lock
