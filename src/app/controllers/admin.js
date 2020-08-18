@@ -1,10 +1,14 @@
+const Recipe = require('../model/Recipe');
+
 const data = require('../../data.json');
 const fs = require('fs');
 
 
 exports.index = (req, res) => {
-  const dataIndex = data.recipes;
-  return res.render('admin/index', {dataIndex});
+  Recipe.index( (recipes)=> {
+
+    return res.render("admin/index", { recipes })
+  })
 }
 
 exports.show =  (req,res) => {

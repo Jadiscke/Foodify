@@ -8,13 +8,15 @@ module.exports = {
                 image,
                 ingredients,
                 preparations,
-                information
+                information,
+                title
             ) VALUES (
                 $1,
                 $2,
                 $3,
                 $4,
-                $5
+                $5,
+                $6
             ) RETURNING id
         `;
 
@@ -23,7 +25,8 @@ module.exports = {
             data.image,
             data.ingredients,
             data.preparations,
-            data.information
+            data.information,
+            data.title
         ];
 
         db.query(query,values, (err, results)=> {
@@ -34,7 +37,9 @@ module.exports = {
     },
     index(callback){
         db.query(`
-        SELECT recipes.* FROM recipes
+        SELECT recipes.* , chefs.name as chef_name 
+        FROM recipes
+        LEFT JOIN chefs ON (chefs.id = recipes.chef_id)
         `, (err, results)=> {
             if(err) throw `Database ERROR! \n ${err}`
 
