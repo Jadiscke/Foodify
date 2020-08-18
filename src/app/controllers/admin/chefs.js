@@ -14,6 +14,11 @@ const chefs = {
     },
     show(req,res){
         res.send("Route Working");
+    },
+    post(req,res){
+        Chef.create(req.body,()=>{
+            return res.redirect("/admin/chefs");
+        });
     }
 }
 

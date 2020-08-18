@@ -29,5 +29,6 @@ module.exports = routes
 // Chefs
 
 routes.get("/admin/chefs", chefs.index);
+routes.post("/admin/chefs", chefs.post);
 routes.get("/admin/chefs/create", chefs.create);
 routes.get("/admin/chefs/:id", chefs.show);
