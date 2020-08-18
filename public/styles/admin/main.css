@@ -125,7 +125,7 @@ h3 {
 .cards .card .card-info * {
   display: block;
 }
-.cards .card .card-info .card-author + a {
+.cards .card .card-info a {
   margin-top: 1.0rem;
   display: block;
   font-weight: bold;

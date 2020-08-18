@@ -4,6 +4,7 @@
 
 {% block styles %}
   <link rel="stylesheet" href="/styles/admin/index.css">
+  <link rel="stylesheet" href="/styles/admin/chefs/index.css">
 {% endblock styles %}
 
 {% block main %}
@@ -15,17 +16,20 @@
     </div>
     
       <div class="cards">
-      {% for data in chefs %}
-      
-        <div class="card" id="{{data.id}}">
-          <img src="{{data.avatar_url}}" alt="{{data.name}} avatar">
-          <div class="card-info">
-            <h4 class="card-name">
-              {{data.name}}
-            </h4>
+        {% for data in chefs %}
+        
+          <div class="card" id="{{data.id}}">
+            <img src="{{data.avatar_url}}" alt="{{data.name}} avatar">
+            <div class="card-info">
+              <h4 class="card-name">
+                {{data.name}}
+              </h4>
+
+              <a href="/admin/chefs/{{data.id}}">Visualizar</a>
+
+            </div>
           </div>
-        </div>
-      {% endfor %}
+        {% endfor %}
       </div>
   </main>
 
