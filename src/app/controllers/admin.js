@@ -1,5 +1,5 @@
 const Recipe = require('../model/Recipe');
-
+const Chef = require('../model/Chef');
 const data = require('../../data.json');
 const fs = require('fs');
 
@@ -30,7 +30,10 @@ exports.show =  (req,res) => {
 }
 
 exports.create =  (req, res) => {
-  return res.render('admin/create');
+  Chef.index((chefs)=>{
+    return res.render("admin/create", { chefs })
+  });
+  
 }
 
 exports.post =  (req, res) => {

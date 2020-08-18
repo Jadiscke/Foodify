@@ -16,8 +16,15 @@
       </div>
       <label for="title">Nome da Receita</label>
       <input type="text" name="title">
-      <label for="author">Autor da Receita</label>
-      <input type="text" name="author">
+      <label for="chef_id">Autor da Receita</label>
+      <select name="chef_id">
+        {% for chef in chefs %}
+           <option type="text" value="{{chef.id}}">
+             {{chef.name}}
+           </option>
+        {% endfor %}
+       
+      </select>
       <label for="image_url">Imagem</label>
       <input type="text" name="image_url">
       <label for="ingredients[]">Ingredientes</label>

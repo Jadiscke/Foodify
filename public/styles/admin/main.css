@@ -14,6 +14,7 @@
   text-decoration: none;
   outline: none;
   color: var(--font-color);
+  transition: 0.5s ease-in-out;
 }
 
 button,
@@ -24,6 +25,7 @@ a {
 body {
   font-family: Roboto, sans-serif;
   list-style: none;
+  
 }
 
 main {

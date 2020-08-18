@@ -38,7 +38,8 @@ form label {
   margin-top: 3.0rem;
 }
 
-form input {
+form input,
+form select {
   display: block;
   width: 100%;
   border: .1rem solid #ddd;
