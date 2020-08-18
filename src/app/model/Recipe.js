@@ -7,7 +7,7 @@ module.exports = {
                 chef_id,
                 image,
                 ingredients,
-                preparations,
+                preparation,
                 information,
                 title
             ) VALUES (

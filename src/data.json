@@ -24,6 +24,27 @@
         ""
       ],
       "information": "Preaqueça a chapa, frigideira ou grelha por 10 minutos antes de levar os hambúrgueres. Adicione um pouquinho de óleo ou manteiga e não amasse os hambúrgueres! \\n\\n Você sabia que a receita que precede o hambúrguer surgiu no século XIII, na Europa? A ideia de moer a carne chegou em Hamburgo no século XVII, onde um açogueiro resolveu também temperá-la. Assim, a receita foi disseminada nos Estados Unidos por alemães da região. Lá surgiu a ideia de colocar o hambúrguer no meio do pão e adicionar outros ingredientes, como queijom tomates e alface.\r\n      "
+    },
+    {
+      "id": 2,
+      "title": "Pizza",
+      "image_url": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+      "ingredients": [
+        "1/2 kg de farinha",
+        "1 copo americano de água morna",
+        "30 g de fermento fresco",
+        "1/2 xícara de óleo",
+        "1 colheres de chá de sal",
+        "1 colher de café de açúcar"
+      ],
+      "preparations": [
+        "Esquente a água, dissolva o fermento nela e junte o óleo, o sal e o açúcar.",
+        "Faça um montinho com a farinha numa vasilha bem grande ou em um tampo de granito bem limpo (com álcool) e abra um buraco no meio. ",
+        "Vá adicionando a mistura de água e óleo e misture com as mãos por uns 15 minutos até a massa começar a desgrudar da mão. Se for necessário, acrescente mais farinha para chegar ao ponto ideal da massa. ",
+        "Divida a massa em umas 5 bolas e cubra com um pano úmido por pelo menos 40 minutos, quanto mais tempo a massa descansar, mais fofa ficará.",
+        "Depois disso, estique as massas com as mãos ou com um rolo e coloque em formas untadas, adicione o recheio e asse em forno alto por cerca de 20 minutos."
+      ],
+      "information": "\r\n      "
     }
   ]
 }
