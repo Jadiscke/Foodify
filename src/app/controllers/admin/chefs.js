@@ -13,7 +13,9 @@ const chefs = {
         return res.render("admin/chefs/create");
     },
     show(req,res){
-        res.send("Route Working");
+        Chef.findById(req.params.id, (chef) => {
+            return res.render("admin/chefs/chef", { chef });
+        })
     },
     post(req,res){
         Chef.create(req.body,()=>{

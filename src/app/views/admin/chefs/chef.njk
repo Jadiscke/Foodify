@@ -1,0 +1,34 @@
+{% extends "admin/layout.njk" %}
+{% set title = "Chef" %}
+
+{% block styles %}
+<link rel="stylesheet" href="/styles/recipe.css">
+<link rel="stylesheet" href="/styles/admin/chefs/chef.css">
+{% endblock styles %}
+
+{% block main %}
+  <main id="chef">
+    <div class="head-chef head">
+      <h3>Chef: {{chef.name}}</h3>
+      <a href="/admin/chefs/{{chef.id}}/edit" type="button"><span>Editar Chef</span></a>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <img src="{{chef.avatar_url}}" alt="{{chef.name}} Avatar">
+        <div class="card-info">
+          <h4 class="card-name">
+            {{chef.name}}
+          </h4>
+          <span class="card-author">4 receitas</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+{% endblock main %}
+
+{% block scripts %}
+<script src="/scripts/hide.js"></script>
+{% endblock scripts %}
+
+
