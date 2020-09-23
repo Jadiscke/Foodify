@@ -1,10 +1,14 @@
-const data = require('./data.json');
+const Recipe = require('../model/Recipe');
+const Chef = require('../model/Chef');
+const data = require('../../data.json');
 const fs = require('fs');
 
 
 exports.index = (req, res) => {
-  const dataIndex = data.recipes;
-  return res.render('admin/index', {dataIndex});
+  Recipe.index( (recipes)=> {
+
+    return res.render("admin/index", { recipes })
+  })
 }
 
 exports.show =  (req,res) => {
@@ -26,35 +30,17 @@ exports.show =  (req,res) => {
 }
 
 exports.create =  (req, res) => {
-  return res.render('admin/create');
+  Chef.index((chefs)=>{
+    return res.render("admin/create", { chefs })
+  });
+  
 }
 
 exports.post =  (req, res) => {
 
-  const {image_url, title, ingredients,author, preparations, information} = req.body;
-
-  const lastRecipe = data.recipes[data.recipes.length - 1];
-  const id = lastRecipe ?  lastRecipe.id + 1 : 1;
-
-  const data_send = {
-    id,
-    title,
-    author,
-    image_url,
-    ingredients,
-    preparations,
-    information
-  }
-  
-
-  data.recipes.push(data_send);
-  
-
-  fs.writeFile("src/data.json",JSON.stringify(data, null, 2), function(err){
-    if(err) return res.send('Write File Error');
-    console.log(data);    
-    return res.redirect('/admin');
-  });
+  Recipe.create(req.body, ()=>{
+    return res.redirect("/admin/recipes")
+  })
   
 }
 

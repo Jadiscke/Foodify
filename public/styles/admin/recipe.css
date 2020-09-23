@@ -4,11 +4,11 @@
   justify-content: space-between;
   position: relative;
   width: 100%;
-  margin-bottom: 30px;
+  margin-bottom: 3rem;
 }
 #recipe .head-recipe a[type="button"] {
   position: static;
-  max-width: 200px;
+  max-width: 20rem;
 }
 #recipe .head-recipe a[type="button"] span {
   filter: none;
